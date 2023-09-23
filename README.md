@@ -2,7 +2,11 @@
 
 may need to delete `node_modules\.cache`
 
+react-app% `npm install`
+
 react-app% `npm run-script start`
+
+App runs at http://localhost:3000
 
 # Start springboot application
 
