@@ -1,19 +1,40 @@
 package com.nestedsoftware.springbootscaffolding.domain;
 
-public class Item {
-    private final Long id;
-    private final String itemName;
+//jakarta replaces javax in springboot 3.x
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-    public Item(Long id, String itemName) {
-        this.id = id;
-        this.itemName = itemName;
+@Entity
+@Table(name = "ITEMS")
+public class Item {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "name")
+    private String itemName;
+
+    public Item() {
     }
 
     public Long getId() {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getItemName() {
         return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 }

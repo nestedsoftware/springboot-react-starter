@@ -11,3 +11,7 @@ springboot-app% `gradlew :bootRun`
 Runs rest endpoint at http://localhost:8080/items
 
 rebuilding with `gradlew build` will reload java changes
+
+h2 console web app:
+
+http://localhost:8080/h2-console (password = password)

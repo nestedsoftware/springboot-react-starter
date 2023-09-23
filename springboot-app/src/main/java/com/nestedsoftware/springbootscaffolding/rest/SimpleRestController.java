@@ -1,5 +1,7 @@
 package com.nestedsoftware.springbootscaffolding.rest;
 
+import com.nestedsoftware.springbootscaffolding.repository.ItemRepository;
+
 import com.nestedsoftware.springbootscaffolding.domain.Item;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,9 +12,17 @@ import java.util.List;
 
 @RestController
 public class SimpleRestController {
+    private final ItemRepository repository;
+
+    SimpleRestController(ItemRepository repository) {
+        this.repository = repository;
+    }
+
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/items")
     List<Item> all() {
-        return Arrays.asList(new Item(1L, "coffee"), new Item(2L, "tea"), new Item(3L, "cookies"));
+        List<Item> items = repository.findAll();
+        System.out.println("items = " + items);
+        return items;
     }
 }
