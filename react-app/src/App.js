@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 
-export default function Game() {
+import { Grid, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
+import * as Muicon from "@mui/icons-material";
+
+export default function Items() {
   const [values, setValues] = useState([])
 
   useEffect(() => {
@@ -15,17 +18,23 @@ export default function Game() {
     });
   }, []);
 
+  const Icon = Muicon['CoffeeTwoTone']
+
   const items = values.map(value =>
-    <li key={value.id}>
-      <p>
-        {value.itemName}
-      </p>
-    </li>);
+    <ListItem key={value.id}>
+      <ListItemIcon>
+        <Icon fontSize="large" sx={{ px: 1 }}/>
+      </ListItemIcon>
+      <ListItemText primary={value.itemName}/>
+    </ListItem>
+  );
 
   return (
-    <ul>
+    <Grid item xs={12} md={6}>
+      <List>
       {items}
-    </ul>
+      </List>
+    </Grid>
   );
 }
 
