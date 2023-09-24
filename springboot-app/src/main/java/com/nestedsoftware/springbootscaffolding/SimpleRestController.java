@@ -22,7 +22,6 @@ public class SimpleRestController {
     @GetMapping("/items")
     List<Item> all() {
         List<Item> items = repository.findAll();
-        System.out.println("items = " + items);
         return items;
     }
 }
