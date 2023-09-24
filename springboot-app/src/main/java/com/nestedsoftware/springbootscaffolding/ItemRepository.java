@@ -1,6 +1,6 @@
-package com.nestedsoftware.springbootscaffolding.repository;
+package com.nestedsoftware.springbootscaffolding;
 
-import com.nestedsoftware.springbootscaffolding.domain.Item;
+import com.nestedsoftware.springbootscaffolding.Item;
 
 import java.util.List;
 

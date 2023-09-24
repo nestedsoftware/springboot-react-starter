@@ -1,4 +1,4 @@
-package com.nestedsoftware.springbootscaffolding.domain;
+package com.nestedsoftware.springbootscaffolding;
 
 //jakarta replaces javax in springboot 3.x
 import javax.persistence.Entity;

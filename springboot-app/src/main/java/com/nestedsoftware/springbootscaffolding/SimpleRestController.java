@@ -1,8 +1,8 @@
-package com.nestedsoftware.springbootscaffolding.rest;
+package com.nestedsoftware.springbootscaffolding;
 
-import com.nestedsoftware.springbootscaffolding.repository.ItemRepository;
+import com.nestedsoftware.springbootscaffolding.ItemRepository;
+import com.nestedsoftware.springbootscaffolding.Item;
 
-import com.nestedsoftware.springbootscaffolding.domain.Item;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
